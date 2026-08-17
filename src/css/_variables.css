@@ -1,0 +1,68 @@
+/*
+* VARIABLES
+* - File intended for all project variables.
+*/
+
+:root{
+  --white: #FFFFFF;
+  --black: #000;
+  --gray: #888888; /* text dark*/
+  --gray02: #6b6b6b; /* text light*/
+  --gray03:rgba(255,255,255,0.25); /* border*/
+  --gray04: rgba(0,0,0,0.82);  /* nav dark*/
+  --gray05: rgba(244,244,244,0.9); /* nav light*/
+  --gray06: rgba(0,0,0,0.03);
+  --green: #c8ff00;
+  --purple: #7c3aed;
+  --fontWeightLight:300;
+  --fontWeightRegular: 400;
+  --fontWeightMedium: 500;
+  --fontWeightSemiBold: 600;
+  --fontWeightBold: 700;
+  --fontWeightExtraBold:800;
+  --fontWeightBlack:900;
+}
+
+html[data-theme="light"]{
+  --background: var(--white);
+  --colorH1: var(--black);
+  --colorH1Span:var(--gray);
+  --colorbtnMobileMenu:var(--gray);
+  --colorH2: var(--black);
+  --colorH3: var(--black);
+  --colorH4: var(--gray02);
+  --colorP: var(--gray02);
+  --colorLogo: var(--black);
+  --colorButtonTheme:var(--black);
+  --backgroundNavMenu: var(--gray05);
+  --colorBorder:var(--gray02);
+  --colorAccent: var(--purple);
+  --colorCta:var(--black);
+  --colorCtaHover:var(--white);
+  --colorQuote:var(--black);
+  --colorBody:var(--gray02);
+  --colorCardHover:var(--gray06);
+  --colorAvatar:var(--white);
+}
+
+html[data-theme="dark"]{
+  --background: var(--black);
+  --colorH1: var(--white);
+  --colorH1Span:var(--gray);
+  --colorbtnMobileMenu:var(--white);
+  --colorH2: var(--white);
+  --colorH3: var(--white);
+  --colorH4: var(--gray);
+  --colorP: var(--gray);
+  --colorLogo: var(--white);
+  --colorButtonTheme:var(--white);
+  --backgroundNavMenu: var(--gray04);
+  --colorBorder:var(--gray03);
+  --colorAccent: var(--green);
+  --colorCta:var(--white);
+  --colorCtaHover:var(--black);
+  --colorQuote:var(--white);
+  --colorBody:var(--white);
+  --colorCardHover:var(--gray03);
+  --colorAvatar:var(--white);
+}
