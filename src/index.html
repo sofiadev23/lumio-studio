@@ -1,204 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lumio Studio — Digital Content Agency</title>
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <meta name="description" content="Lumio is a forward-thinking digital content studio that creates strategies, visuals and stories that stop the scroll — and move people to act."/>
-  <meta name="author" content="Lumio Studio"/>
-</head>
-<body>
-  <!-- ── NAV ── -->
-  <header class="primary-header">
-    <div class="header-container">
-      <div class="column-left">
-        <a href="index.html">Lumio</a>
-        <div class="dot"></div>
-      </div>
-      <div class="column-center">
-        <nav>
-          <ul>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#work">Work</a>
-            </li>
-            <li>
-              <a href="#process">Process</a>
-            </li>
-            <li>
-              <a href="#blog">Blog</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="column-right">
-        <button id="toggle-theme" onclick="toggleTheme()"> 
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="24" 
-            height="24" 
-            fill="#f6cf09" 
-            viewBox="0 0 256 256">
-            <path d="M235.54,150.21a104.84,104.84,0,0,1-37,52.91A104,104,0,0,1,32,120,103.09,103.09,0,0,1,52.88,57.48a104.84,104.84,0,0,1,52.91-37,8,8,0,0,1,10,10,88.08,88.08,0,0,0,109.8,109.8,8,8,0,0,1,10,10Z"/>
-          </svg>
-        </button>
-        <a href="#cta" class="button-cta">Get in Touch</a>
-        <div class="menu-mobile-wrapper">
-          <button onclick="openMenuMobile()" class="btnOpenMenuMobile">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumio Studio — Digital Content Agency</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta name="description" content="Lumio is a forward-thinking digital content studio that creates strategies, visuals and stories that stop the scroll — and move people to act."/>
+    <meta name="author" content="Lumio Studio"/>
+  </head>
+  <body>
+    <!-- ── NAV ── -->
+    <header class="primary-header">
+      <div class="header-container">
+        <div class="column-left">
+          <a href="index.html">Lumio</a>
+          <div class="dot"></div>
+        </div>
+        <div class="column-center">
+          <nav>
+            <ul>
+              <li>
+                <a href="#services">Services</a>
+              </li>
+              <li>
+                <a href="#work">Work</a>
+              </li>
+              <li>
+                <a href="#process">Process</a>
+              </li>
+              <li>
+                <a href="#blog">Blog</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="column-right">
+          <button id="toggle-theme" onclick="toggleTheme()"> 
             <svg 
-              width="32" 
-              height="32" 
-              viewBox="0 0 32 32" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path 
-                d="M5.33337 6.66667H26.6667" 
-                stroke="white" 
-                stroke-width="4" 
-                stroke-linecap="round" 
-                stroke-linejoin="round"
-              />
-              <path 
-                d="M5.33337 16H26.6667" 
-                stroke="white" 
-                stroke-width="4" 
-                stroke-linecap="round" 
-                stroke-linejoin="round"
-              />
-              <path 
-                d="M5.33337 25.3333H26.6667" 
-                stroke="white" 
-                stroke-width="4" 
-                stroke-linecap="round" 
-                stroke-linejoin="round"
-              />
+              xmlns="http://www.w3.org/2000/svg" 
+              width="24" 
+              height="24" 
+              fill="#f6cf09" 
+              viewBox="0 0 256 256">
+              <path d="M235.54,150.21a104.84,104.84,0,0,1-37,52.91A104,104,0,0,1,32,120,103.09,103.09,0,0,1,52.88,57.48a104.84,104.84,0,0,1,52.91-37,8,8,0,0,1,10,10,88.08,88.08,0,0,0,109.8,109.8,8,8,0,0,1,10,10Z"/>
             </svg>
           </button>
-          <div class="drawerMenu">
-            <div>
-              <button onclick="closeMenuMobile()" class="btnCloseMenuMobile">
-                <svg 
-                  width="37" 
-                  height="37" 
-                  viewBox="0 0 37 37" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M29.2917 4.625H7.70833C6.00546 4.625 4.625 6.00546 4.625 7.70833V29.2917C4.625 30.9945 6.00546 32.375 7.70833 32.375H29.2917C30.9945 32.375 32.375 30.9945 32.375 29.2917V7.70833C32.375 6.00546 30.9945 4.625 29.2917 4.625Z" stroke="#42446E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M23.125 4.625V32.375" stroke="#42446E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M12.3334 13.875L16.9584 18.5L12.3334 23.125" stroke="#42446E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-              <nav class="nav-links">
-                <ul>
-                  <li class="nav-link">
-                    <a href="#services">Services</a>
-                  </li>
-                  <li class="nav-link">
-                    <a href="#work">Work</a>
-                  </li>
-                  <li class="nav-link">
-                    <a href="#process">Process</a>
-                  </li>
-                  <li class="nav-link">
-                    <a href="#blog">Blog</a>
-                  </li>
-                  <li class="nav-link">
-                    <a href="#cta">Get in Touch</a>
-                  </li>
-                </ul>
-              </nav>
+          <a href="#cta" class="button-cta">Get in Touch</a>
+          <div class="menu-mobile-wrapper">
+            <button onclick="openMenuMobile()" class="btnOpenMenuMobile">
+              <svg 
+                width="32" 
+                height="32" 
+                viewBox="0 0 32 32" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path 
+                  d="M5.33337 6.66667H26.6667" 
+                  stroke="white" 
+                  stroke-width="4" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"
+                />
+                <path 
+                  d="M5.33337 16H26.6667" 
+                  stroke="white" 
+                  stroke-width="4" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"
+                />
+                <path 
+                  d="M5.33337 25.3333H26.6667" 
+                  stroke="white" 
+                  stroke-width="4" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="drawerMenu">
+              <div>
+                <button onclick="closeMenuMobile()" class="btnCloseMenuMobile">
+                  <svg 
+                    width="37" 
+                    height="37" 
+                    viewBox="0 0 37 37" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M29.2917 4.625H7.70833C6.00546 4.625 4.625 6.00546 4.625 7.70833V29.2917C4.625 30.9945 6.00546 32.375 7.70833 32.375H29.2917C30.9945 32.375 32.375 30.9945 32.375 29.2917V7.70833C32.375 6.00546 30.9945 4.625 29.2917 4.625Z" stroke="#42446E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23.125 4.625V32.375" stroke="#42446E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.3334 13.875L16.9584 18.5L12.3334 23.125" stroke="#42446E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <nav class="nav-links">
+                  <ul>
+                    <li class="nav-link">
+                      <a href="#services">Services</a>
+                    </li>
+                    <li class="nav-link">
+                      <a href="#work">Work</a>
+                    </li>
+                    <li class="nav-link">
+                      <a href="#process">Process</a>
+                    </li>
+                    <li class="nav-link">
+                      <a href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-link">
+                      <a href="#cta">Get in Touch</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <main>
-    <!-- ── TICKER ── -->
-    <section class="services-carousel">
-      <div class="carousel-track">
-        <!-- set 1 -->
-        <ul class="wrap-carousel">
-          <li class="service-item">
-            <h4> Video Production </h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Content Strategy</h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Copywriting </h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Visual Design </h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> SEO Content </h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Social Media  </h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Brand Storytelling  </h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Email Marketing </h4>
-            <div class="dot-carousel"></div>
-          </li>
-        </ul>
-        <!-- set 2 (duplicate wrap-carousel for loop) -->
-        <ul class="wrap-carousel">
-          <li class="service-item">
-            <h4> Video Production</h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Content Strategy</h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Copywriting </h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Visual Design </h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> SEO Content </h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Social Media  </h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Brand Storytelling  </h4>
-            <div class="dot-carousel"></div>
-          </li>
-          <li class="service-item">
-            <h4> Email Marketing </h4>
-            <div class="dot-carousel"></div>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  <script src="js/main.js"></script>
-</body>
+    </header>
+    <main>
+      <!-- ── TICKER ── -->
+      <section class="services-carousel">
+        <div class="carousel-track">
+          <!-- set 1 -->
+          <ul class="wrap-carousel">
+            <li class="service-item">
+              <h4> Video Production </h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Content Strategy</h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Copywriting </h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Visual Design </h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> SEO Content </h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Social Media  </h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Brand Storytelling  </h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Email Marketing </h4>
+              <div class="dot-carousel"></div>
+            </li>
+          </ul>
+          <!-- set 2 (duplicate wrap-carousel for loop) -->
+          <ul class="wrap-carousel">
+            <li class="service-item">
+              <h4> Video Production</h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Content Strategy</h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Copywriting </h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Visual Design </h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> SEO Content </h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Social Media  </h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Brand Storytelling  </h4>
+              <div class="dot-carousel"></div>
+            </li>
+            <li class="service-item">
+              <h4> Email Marketing </h4>
+              <div class="dot-carousel"></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ── HERO ── -->
+      <section class="hero-section container">
+        <h1>
+          Digital<br>
+          <span>Content</span><br>
+          Studio
+        </h1>
+        <p>Lumio is a forward-thinking digital content studio that creates strategies, visuals and stories that stop the scroll — and move people to act.</p>
+        <div class="hero-cta">
+          <a href="#services" class="btn-services">Our Services</a>
+        </div>
+        <div class="hero-stats-container">
+          <div class="hero-stats">
+            <div class="stat-container">
+              <h3>50 <span>+</span></h3>
+              <p>Brands scaled</p>
+            </div>
+            <div class="stat-container">
+              <h3>3 <span>x</span></h3>
+              <p>Avg. engagement lift</p>
+            </div>
+            <div class="stat-container">
+              <h3>30 <span>+</span></h3>
+              <p>Content pieces / month</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
 </html>
