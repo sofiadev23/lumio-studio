@@ -377,6 +377,111 @@ a{
   line-height: 18px;
 }
 
+/*
+*
+* HEADER SECTIONS
+*
+*/
+
+.header-sections{
+  padding: 50px 0;
+  border-bottom: 1px solid var(--colorBorder);
+}
+
+.header-sections h4{
+  margin-top: 0;
+}
+
+.header-sections .first-column h2{
+  margin: 0 0 15px 0;
+}
+
+.header-sections .second-column a{
+  font-size: 1.5rem;
+  font-weight: var(--fontWeightMedium);
+  color: var(--colorP);
+  transition: color .2s;
+}
+
+/*
+*
+* SERVICES SECTION
+*
+*/
+
+.services-section header .second-column{
+  width: 100%;
+  max-width: 370px;
+}
+
+.services-section header .second-column p{
+  margin: 0;
+}
+
+.services-section .service-row{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--colorBorder);
+}
+
+.service-row .service-number p{
+  font-size: 1.2rem;
+  font-family: "Syne", sans-serif;
+  font-weight: var(--fontWeightSemiBold);
+  color: var(--colorP);
+  line-height: 18px;
+}
+
+.service-row .service-description{
+  width: 100%;
+  max-width: 310px;
+}
+
+.service-row .service-description h3 {
+  margin: 0;
+}
+
+.service-row .service-description p {
+  max-width: 500px;
+  margin: 15px 0 20px 0 ;
+}
+
+.service-row .service-description .service-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.service-row .service-description .service-tags .service-tag{
+  font-size: 1.2rem;
+  font-weight: var(--fontWeightMedium);
+  color: var(--colorP);
+  padding: 5px 14px;
+  border: 1px solid var(--colorBorder);
+  border-radius: 22px;
+}
+
+.service-row .service-img{
+  border-radius: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.service-row .service-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: .4s ease transform;
+}
+
+.service-row:hover .service-img img{
+  transform: scale(1.1);
+}
+
 /*TABLET*/
 @media (min-width: 576px){
   .container{
@@ -385,6 +490,10 @@ a{
 
   .header-container{
     max-width: 600px;
+  }
+
+  .service-row .service-description{
+    max-width: 450px;
   }
 }
 
@@ -425,4 +534,26 @@ a{
     gap: 48px;
   }
 
+  .header-sections{
+    display: flex;
+    align-items:end;
+    justify-content: space-between;
+    padding: 70px 0;
+    border-bottom: 1px solid var(--colorBorder);
+  }
+
+  .header-sections .first-column h2{
+    margin: 0;
+    line-height: 60px;
+  }
+
+  .services-section .service-row{
+    flex-wrap: nowrap;
+    gap: 80px;
+    padding: 40px 25px;
+  }
+
+  .service-row .service-description{
+    max-width: 742px;
+  }
 }
