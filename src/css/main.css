@@ -428,7 +428,8 @@ a{
   border-bottom: 1px solid var(--colorBorder);
 }
 
-.service-row .service-number p{
+.service-row .service-number p,
+.process-row .process-number p {
   font-size: 1.2rem;
   font-family: "Syne", sans-serif;
   font-weight: var(--fontWeightSemiBold);
@@ -611,6 +612,33 @@ a{
   line-height: 18px;
 }
 
+/*
+*
+* PROCESS SECTION
+*
+*/
+
+.process-section header {
+  border-top: 1px solid var(--colorBorder);
+}
+
+.process-section .process-row{
+  display: flex;
+  gap: 25px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--colorBorder);
+}
+
+.process-row .process-description h3 {
+  font-size: clamp(1.3rem, 5vw, 2.8rem);
+  margin: 0; 
+}
+
+.process-row .process-description p {
+  max-width: 600px;
+  margin: 10px 0 0 0;
+}
+
 /*TABLET*/
 @media (min-width: 576px){
   .container{
@@ -692,5 +720,10 @@ a{
 
   .work-section .work-row .work-card{ 
     width: 50%;
+  }
+
+  .process-section .process-row{
+    gap: 80px;
+    padding: 40px 25px;
   }
 }
