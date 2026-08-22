@@ -120,20 +120,23 @@ a{
 }
 
 .header-container .column-left,
-.header-container .column-right {
+.header-container .column-right,
+.footer-container .column-left .logo {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.header-container .column-left a{
+.header-container .column-left a,
+.footer-container .column-left .logo a{
   font-size: 1.8rem;
   font-family: "Syne", sans-serif;
   font-weight: var(--fontWeightExtraBold);
   color: var(--colorLogo);
 }
 
-.header-container .column-left .dot{
+.header-container .column-left .dot,
+.footer-container .column-left .dot{
   width: 7px;
   height: 7px;
   background: var(--colorAccent);
@@ -153,7 +156,9 @@ a{
 
 .header-container .column-center nav ul li a:hover,
 .menu-mobile-wrapper .drawer-menu nav ul li a:hover,
-.header-sections .second-column a:hover{
+.header-sections .second-column a:hover,
+.footer-container .column-left a:hover,
+.footer-container .column-right ul li a:hover{
   color: var(--colorCta);
 }
 
@@ -741,6 +746,49 @@ a{
   color: var(--colorAccent);
 }
 
+/*
+*
+* FOOTER SECTION
+*
+*/
+
+.footer-section {
+  padding: 60px 30px;
+}
+
+.footer-container .column-left{
+  text-align: center;
+}
+
+.footer-container .column-left .logo{
+  justify-content: center;
+}
+
+.footer-container .column-left h4{
+  margin: 10px 0;
+}
+
+.footer-container .column-left a,
+.footer-container .column-right ul li a{
+  font-size: 1.5rem;
+  color: var(--gray);
+  transition: color .2s;
+}
+
+.footer-container .column-right ul{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-section p{
+  text-align: center;
+  margin: 25px 0;
+}
+
 /*TABLET*/
 @media (min-width: 576px){
   .container{
@@ -771,7 +819,8 @@ a{
   }
 
   .header-container .column-left,
-  .header-container .column-right {
+  .header-container .column-right,
+  .footer-section .footer-container .column-left .logo {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -866,5 +915,19 @@ a{
   .cta-section h2{
     letter-spacing:-3.456px;
     line-height: 90px;
+  }
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-container .column-left{
+    text-align: start;
+  }
+
+  .footer-container .column-left .logo{
+    display: flex;
+    justify-content: flex-start;
   }
 }
