@@ -193,12 +193,14 @@ a{
 }
 
 .header-container .column-right .button-cta,
-.hero-section .hero-cta a{
+.hero-section .hero-cta a,
+.cta-section a{
   transition: background .3s, border-color .3s, color .3s;
 }
 
 .header-container .column-right .button-cta:hover,
-.hero-section .hero-cta a:hover{
+.hero-section .hero-cta a:hover,
+.cta-section a:hover{
   background-color: var(--colorButtonTheme);
   color: var(--colorCtaHover);
 }
@@ -334,7 +336,8 @@ a{
   justify-content: center;
 }
 
-.hero-section .hero-cta a{
+.hero-section .hero-cta a,
+.cta-section a{
   font-size: clamp(1.3rem, 3vw, 1.5rem);
   font-weight: var(--fontWeightMedium);
   color: var(--colorCta);
@@ -713,6 +716,31 @@ a{
   margin-top: 25px;
 }
 
+/*
+*
+* CTA SECTION
+*
+*/
+
+.cta-section .cta-section-container{
+  padding: 100px 0 111px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--colorBorder);
+}
+
+.cta-section-container h4{
+  margin: 0 0 20px 0;
+}
+
+.cta-section-container h2{
+  font-size: clamp(3rem, 6vw, 8.6rem);
+  margin: 0 0 36px 0;
+}
+
+.cta-section-container h2 span{
+  color: var(--colorAccent);
+}
+
 /*TABLET*/
 @media (min-width: 576px){
   .container{
@@ -725,6 +753,10 @@ a{
 
   .service-row .service-description{
     max-width: 450px;
+  }
+
+  .cta-section h2{
+    line-height: 50px;
   }
 }
 
@@ -821,5 +853,18 @@ a{
     border-left: 1px solid var(--colorBorder);
     margin-bottom: 0;
     margin-top: 0;
+  }
+
+  .cta-section .cta-section-container{
+    padding: 100px 40px 111px 40px;
+  }
+
+  .cta-section h4{
+    margin: 0 0 20px 0;
+  }
+
+  .cta-section h2{
+    letter-spacing:-3.456px;
+    line-height: 90px;
   }
 }
